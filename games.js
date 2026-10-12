@@ -1,25 +1,21 @@
 // 分類顯示順序以這個陣列為準。
 // id 是程式使用的代號；name 是網站上顯示的分類名稱。
 const categories = [
-  {
-    id: "memory",
-    name: "記憶類"
+  { 
+    id: "Albert",
+    name: "Albert 的遊戲"
   },
   {
-    id: "reaction",
-    name: "辨識／反應類"
+    id: "Shark",
+    name: "Shark 的遊戲"
   },
   {
-    id: "logic",
-    name: "益智／邏輯類"
+    id: "Roger",
+    name: "Roger 的遊戲"
   },
   {
-    id: "action",
-    name: "動作類"
-  },
-  {
-    id: "other",
-    name: "其他/活動類"
+    id: "Henry",
+    name: 'Henry 的遊戲'
   }
 ];
 
@@ -28,99 +24,184 @@ const categories = [
 const games = [
   {
     name: "水母記憶遊戲",
-    category: "memory",
-    description: "記住水母跳舞的順序，依序點選牠們！",
+    category: "Shark",
+    description: "",
     url: "https://sharkwang0903.github.io/jellyfish-memory/",
-    image: "assets/jellyfish-blue.png"
+    image: ""
   },
-
   {
     name: "消失的格子",
-    category: "memory",
-    description: "記住剛才亮起的位置，熄燈後重新還原整個棋盤。",
+    category: "Shark",
+    description: "",
     url: "https://sharkwang0903.github.io/The-disappearing-grid/",
-    image: "assets/The-disappearing-grid.png"
+    image: ""
   },
-
   {
     name: "數字瞬間記憶",
-    category: "memory",
-    description: "記住畫面中的數字，數字消失後依照原順序輸入答案。",
-    url: "https://sharkwang0903.github.io/number-memory/",
-    image: "assets/number-memory.png"
+    category: "Shark",
+    description: "",
+    url: "https://sharkwang0903.github.io/jellyfish-memory/",
+    image: ""
   },
-
   {
     name: "色彩敏感度測試",
-    category: "reaction",
-    description: "找出與其他格子顏色不同的方塊。",
+    category: "Shark",
+    description: "",
     url: "https://sharkwang0903.github.io/color-sensitivity-test/",
-    image: "assets/color-sensitivity-test.png"
+    image: ""
   },
-
-  {
+    {
     name: "顏色排序遊戲",
-    category: "reaction",
-    description: "重新排列每一排的色塊，讓顏色形成最平滑的漸層。",
+    category: "Shark",
+    description: "",
     url: "https://sharkwang0903.github.io/Color-Sorting-Game/",
-    image: "assets/Color-Sorting-Game.png"
+    image: ""
   },
-
   {
-    name: "1 秒鐘到底有多長",
-    category: "reaction",
-    description: "在看不到任何計時資訊的情況下，憑自己的感覺判斷指定時間何時到達。",
-    url: "https://sharkwang0903.github.io/time-test-game/index.html",
-    image: "assets/time-test-game.png"
+    name: "1秒鐘到底有多長",
+    category: "Shark",
+    description: "",
+    url: "https://sharkwang0903.github.io/time-test-game/",
+    image: ""
   },
-
   {
     name: "Stroop 顏色衝突",
-    category: "reaction",
-    description: "請忽略文字本身的意思，快速選擇它實際顯示的顏色。",
+    category: "Shark",
+    description: "",
     url: "https://sharkwang0903.github.io/stroop-game/",
-    image: "assets/stroop-game.png"
+    image: ""
   },
-
   {
     name: "一刀切",
-    category: "logic",
-    description: "畫一條直線，把圖形切成面積完全相等的兩半。",
+    category: "Shark",
+    description: "",
     url: "https://sharkwang0903.github.io/one-cut-game/",
-    image: "assets/one-cut-game.png"
+    image: ""
   },
-
+  {
+    name: "數之背包",
+    category: "Shark",
+    description: "",
+    url: "https://sharkwang0903.github.io/back/",
+    image: ""
+  },
+  {
+    name: "藍點倉庫 · BLUE DOT WAREHOUSE",
+    category: "Shark",
+    description: "",
+    url: "https://sharkwang0903.github.io/BLUE-DOT-WAREHOUSE/",
+    image: ""
+  },
   {
     name: "水母下樓梯",
-    category: "action",
-    description: "不斷往洞穴深處前進，看看你能抵達地下幾樓。",
+    category: "Shark",
+    description: "",
     url: "https://sharkwang0903.github.io/jellyfish-going-down-the-stairs/",
-    image: "assets/jellyfish-idle.png"
+    image: ""
   },
-
   {
-  name: "數之背包",
-  category: "logic",
-  description: "挑選指定數量的商品，讓重量剛好裝滿背包！",
-  url: "https://sharkwang0903.github.io/back/",
-  image: "assets/backpack-home.png"
-},
-
-{
-  name: "012S World Search",
-  category: "logic",
-  description: "在字母棋盤中尋找隱藏的 012S 產品名稱。",
-  url: "https://sharkwang0903.github.io/012S-world-search/",
-  image: "assets/012S World Search.png"
-},
-
-{
-  name: "甜甜菜菜子可可飲｜集章活動",
-  category: "other",
-  description: "喝一瓶，集一章！蒐集指定字章，兌換不同好禮。",
-  url: "https://sharkwang0903.github.io/Stamp-Rally-cocoa/",
-  image: "assets/Stamp-Rally-cocoa.png"
-}
-
-
+    name: "甜甜菜菜子可可飲｜集章活動",
+    category: "Shark",
+    description: "",
+    url: "https://sharkwang0903.github.io/Stamp-Rally-cocoa/",
+    image: ""
+  },
+  {
+    name: "Blackjack 21 點",
+    category: "Shark",
+    description: "",
+    url: "https://sharkwang0903.github.io/blackjack-game/",
+    image: ""
+  },
+  {
+    name: "012S Jelly World 水母世界",
+    category: "Albert",
+    description: "",
+    url: "https://alberthuang-012s.github.io/012s-jelly-world/",
+    image: ""
+  },
+    {
+    name: "Jelly Rescue 小水母救援任務",
+    category: "Albert",
+    description: "",
+    url: "https://alberthuang-012s.github.io/012s-jelly-rescue/",
+    image: ""
+  },
+    {
+    name: "水母養成所 Jelly Lab",
+    category: "Albert",
+    description: "",
+    url: "https://alberthuang-012s.github.io/jelly-lab-mvp/",
+    image: ""
+  },
+    {
+    name: "水母破陣",
+    category: "Albert",
+    description: "",
+    url: "https://alberthuang-012s.github.io/012s-jelly-breakers/",
+    image: ""
+  },
+    {
+    name: "Jelly Sudoku 水母數獨",
+    category: "Albert",
+    description: "",
+    url: "https://alberthuang-012s.github.io/012s-jelly-sudoku/",
+    image: ""
+  },
+    {
+    name: "Jelly Untangle 水母解結",
+    category: "Albert",
+    description: "",
+    url: "https://alberthuang-012s.github.io/012s-jelly-untangle/",
+    image: ""
+  },
+    {
+    name: "Jelly Color Test 色彩辨識測驗",
+    category: "Albert",
+    description: "",
+    url: "https://alberthuang-012s.github.io/012s-jelly-color-test/",
+    image: ""
+  },
+    {
+    name: "每日幸運拉霸",
+    category: "Albert",
+    description: "",
+    url: "https://alberthuang-012s.github.io/012s-slot-game/",
+    image: ""
+  },
+    {
+    name: "Jelly Chain 連鎖實驗室",
+    category: "Albert",
+    description: "",
+    url: "https://alberthuang-012s.github.io/012s-jelly-chain-game/",
+    image: ""
+  },
+  {
+    name: "DDM 精華戰：精華合成",
+    category: "Roger",
+    description: "",
+    url: "https://rogersong-012s.github.io/ddm-essence-boss-battle-game/",
+    image: ""
+  },
+  {
+    name: "我被色記了",
+    category: "Roger",
+    description: "",
+    url: "https://rogersong-012s.github.io/hue-set-me-up/",
+    image: ""
+  },
+  {
+    name: "提燈生存遊戲",
+    category: "Henry",
+    description: "",
+    url: "https://henrysun-code.github.io/Lantern-Survival-Game/",
+    image: ""
+  }, 
+  {
+    name: "反應速度測試",
+    category: "Henry",
+    description: "",
+    url: "https://henrysun-code.github.io/reaction-speed-test/",
+    image: ""
+  }
 ];
