@@ -16,6 +16,10 @@ const categories = [
   {
     id: "Henry",
     name: 'Henry 的遊戲'
+  },
+  {
+    id: "Frank",
+    name: "Frank 的遊戲"
   }
 ];
 
@@ -114,6 +118,13 @@ const games = [
     image: ""
   },
   {
+    name: "水母打磚塊",
+    category: "Shark",
+    description: "",
+    url: "https://sharkwang0903.github.io/block-breaker/",
+    image: ""
+  },
+  {
     name: "012S Jelly World 水母世界",
     category: "Albert",
     description: "",
@@ -202,6 +213,13 @@ const games = [
     category: "Henry",
     description: "",
     url: "https://henrysun-code.github.io/reaction-speed-test/",
+    image: ""
+  },
+  {
+    name: "免費長輩圖與水母祝福圖庫",
+    category: "Frank",
+    description: "",
+    url: "https://frankchu-012s.github.io/easy-pic-preview/hi/cards/",
     image: ""
   }
 ];
