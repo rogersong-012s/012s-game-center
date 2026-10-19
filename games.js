@@ -188,6 +188,13 @@ const games = [
     image: ""
   },
   {
+    name: "012S 配對所",
+    category: "Albert",
+    description: "",
+    url: "https://alberthuang-012s.github.io/012s-card-game/",
+    image: ""
+  },
+  {
     name: "DDM 精華戰：精華合成",
     category: "Roger",
     description: "",
