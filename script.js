@@ -68,19 +68,38 @@ function createCategorySection(category) {
   const heading = document.createElement("h2");
   heading.className = "category-heading";
   heading.id = `category-${category.id}`;
-  heading.textContent = category.name;
+
+  const toggle = document.createElement("button");
+  toggle.className = "category-toggle";
+  toggle.type = "button";
+  toggle.textContent = category.name;
+  toggle.setAttribute("aria-expanded", "true");
+  toggle.setAttribute("aria-controls", `category-content-${category.id}`);
+
+  const content = document.createElement("div");
+  content.className = "category-content";
+  content.id = `category-content-${category.id}`;
+
+  toggle.addEventListener("click", () => {
+    const isExpanded = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", String(!isExpanded));
+    content.hidden = isExpanded;
+    section.classList.toggle("category-section--collapsed", isExpanded);
+  });
+
+  heading.append(toggle);
 
   const categoryGames = category.id === "Tools"
     ? games.filter((game) => game.category === "Tools")
     : games.filter((game) => game.author === category.id);
 
-  section.append(heading);
+  section.append(heading, content);
 
   if (categoryGames.length === 0) {
     const emptyMessage = document.createElement("p");
     emptyMessage.className = "empty-category";
     emptyMessage.textContent = "這個分類目前還沒有內容。";
-    section.append(emptyMessage);
+    content.append(emptyMessage);
     return section;
   }
 
@@ -88,7 +107,7 @@ function createCategorySection(category) {
   grid.className = "game-grid";
   categoryGames.forEach((game) => grid.append(createGameCard(game)));
 
-  section.append(grid);
+  content.append(grid);
   return section;
 }
 
