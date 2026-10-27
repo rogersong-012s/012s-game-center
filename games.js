@@ -132,6 +132,13 @@ const games = [
     image: ""
   },
   {
+    name: "每日會議紀錄線上版",
+    category: "Shark",
+    description: "",
+    url: "https://sharkwang0903.github.io/meeting_minutes/",
+    image: ""
+  },
+  {
     name: "012S Jelly World 水母世界",
     category: "Albert",
     description: "",
