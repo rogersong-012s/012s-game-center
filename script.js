@@ -1,6 +1,8 @@
 const catalog = document.querySelector("#game-catalog");
 
 function createGameCard(game) {
+  const isTool = game.category === "Tools";
+  const actionLabel = isTool ? "開啟工具" : "開始遊戲";
   const card = document.createElement("a");
   card.className = "game-card";
   card.href = game.url;
@@ -8,7 +10,7 @@ function createGameCard(game) {
   card.rel = "noopener noreferrer";
   card.setAttribute(
     "aria-label",
-    `${game.name}－開始遊戲（在新分頁開啟）`
+    `${game.name}－${actionLabel}（在新分頁開啟）`
   );
 
   // image 是空字串時不建立圖片元素，因此不會留下空白圖片區。
@@ -44,7 +46,7 @@ function createGameCard(game) {
 
   const action = document.createElement("span");
   action.className = "game-card__action";
-  action.textContent = "開始遊戲";
+  action.textContent = actionLabel;
 
   const arrow = document.createElement("span");
   arrow.className = "game-card__arrow";
@@ -68,16 +70,16 @@ function createCategorySection(category) {
   heading.id = `category-${category.id}`;
   heading.textContent = category.name;
 
-  const categoryGames = games.filter(
-    (game) => game.category === category.id
-  );
+  const categoryGames = category.id === "Tools"
+    ? games.filter((game) => game.category === "Tools")
+    : games.filter((game) => game.author === category.id);
 
   section.append(heading);
 
   if (categoryGames.length === 0) {
     const emptyMessage = document.createElement("p");
     emptyMessage.className = "empty-category";
-    emptyMessage.textContent = "這個分類目前還沒有遊戲。";
+    emptyMessage.textContent = "這個分類目前還沒有內容。";
     section.append(emptyMessage);
     return section;
   }

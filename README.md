@@ -1,6 +1,6 @@
 # 012S 小遊戲中心
 
-本網站以本團隊成員 Shark 製作的 [Shark's Game Lab](https://sharkwang0903.github.io/shark-game-lab/) 為模板，整理並展示 012S 團隊成員製作的小遊戲與互動作品。首頁依製作者分類呈現遊戲卡片，點選卡片即可在新分頁開啟遊戲。
+本網站以本團隊成員 Shark 製作的 [Shark's Game Lab](https://sharkwang0903.github.io/shark-game-lab/) 為模板，整理並展示 012S 團隊成員製作的小遊戲與實用工具。首頁將工具集中在「工具」區，遊戲則依作者分組；點選卡片會在新分頁開啟。
 
 網站使用原生 HTML、CSS 和 JavaScript 製作。遊戲清單與分類集中在 `games.js`，新增或更新作品時，通常只需要編輯這個檔案。
 
@@ -22,38 +22,52 @@
 
 ## 新增或修改遊戲
 
-在 `games.js` 的 `games` 陣列中新增一筆資料，或修改既有項目：
+在 `games.js` 的 `games` 陣列中新增一款遊戲，或修改既有項目：
 
 ```js
 {
   name: "新遊戲名稱",
-  category: "Roger",
-  description: "用一句話介紹這款遊戲。",
+  author: "Roger",
+  description: "",
   url: "https://example.com/my-game/",
   image: ""
 }
 ```
 
 - `name`：遊戲卡片上的名稱。
-- `category`：分類代碼，須與 `categories` 中某個 `id` 完全相同，包含大小寫。
+- `author`：作者名稱，須與 `categories` 中的作者 `id` 完全相同，包含大小寫。
 - `description`：遊戲簡介；沒有簡介時可填空字串 `""`。
 - `url`：遊戲網址。
 - `image`：預覽圖片路徑；沒有圖片時填空字串 `""`。
 
 遊戲卡片會依照 `games` 陣列的順序排列。新增資料時，請確認每個項目之間有逗號，並將新資料放在陣列的 `[` 和 `]` 之間。儲存後重新整理頁面即可，通常不必修改 `index.html` 或 `script.js`。
 
-## 新增分類
+## 新增工具
 
-在 `games.js` 的 `categories` 陣列中加入分類：
+工具放在首頁的「工具」區。新增工具時，將 `category` 設為 `"Tools"`，並在 `description` 寫上作者：
 
 ```js
 {
-  id: "NewCategory",
-  name: "新分類名稱"
+  name: "新工具名稱",
+  category: "Tools",
+  description: "作者：Shark",
+  url: "https://example.com/my-tool/",
+  image: ""
 }
 ```
 
-`id` 是程式用來配對遊戲的唯一代碼；`name` 是頁面上顯示的分類名稱。分類順序依照 `categories` 陣列排列。新增分類後，將遊戲資料的 `category` 設為相同的 `id`，遊戲就會出現在該分類。
+## 新增遊戲作者分組
+
+在 `games.js` 的 `categories` 陣列加入作者分組：
+
+```js
+{
+  id: "NewAuthor",
+  name: "NewAuthor 的遊戲"
+}
+```
+
+分類順序依照 `categories` 陣列排列。新增遊戲時，`author` 必須和作者分組的 `id` 完全相同。
 
 ## 加入預覽圖片
 
@@ -71,7 +85,7 @@ image: "assets/my-game.png"
 
 - 確認資料放在 `games` 陣列中，且 JavaScript 物件格式正確。
 - 確認項目之間有逗號，字串都有成對的引號。
-- 確認 `category` 和分類 `id` 完全相同，包含大小寫。
+- 確認遊戲的 `author` 和分類 `id` 完全相同，或工具的 `category` 設為 `"Tools"`。
 - 確認網址正確，檔案已儲存，並重新整理頁面。
 
 **預覽圖片沒有顯示**
