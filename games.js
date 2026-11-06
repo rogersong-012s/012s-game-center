@@ -23,7 +23,7 @@ const categories = [
 ];
 
 // 新增遊戲時，只要依照相同格式把新資料加進這個陣列即可。
-// category 必須對應上方某個分類的 id。
+// author 必須對應上方某個作者分類的 id；工具則使用 category: "Tools"。
 const games = [
   {
     name: "水母記憶遊戲",
@@ -205,6 +205,13 @@ const games = [
     author: "Albert",
     description: "",
     url: "https://alberthuang-012s.github.io/012s-card-game/",
+    image: ""
+  },
+  {
+    name: "S21點 | 012S 單機牌桌",
+    author: "Albert",
+    description: "",
+    url: "https://alberthuang-012s.github.io/012s-s21-blackjack/",
     image: ""
   },
   {
