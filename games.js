@@ -255,5 +255,12 @@ const games = [
     description: "作者：Frank",
     url: "https://frankchu-012s.github.io/easy-pic-preview/hi/cards/",
     image: ""
+  },
+  {
+    name: "血檢報告追蹤",
+    category: "Tools",
+    description: "作者：Frank",
+    url: "https://healthdata-upload-website-654246399014.asia-east1.run.app/login",
+    image: ""
   }
 ];
